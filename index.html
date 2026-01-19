@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graffiti Tic-Tac-Toe</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Street Tic-Tac-Toe</h1>
+        <p class="subtitle">Spray. Play. Win.</p>
+      </header>
+
+      <section class="status-panel">
+        <div class="turn">
+          Current Turn: <span id="current-turn">X</span>
+        </div>
+        <div class="status" id="status">Tag the wall to start.</div>
+      </section>
+
+      <section class="board-wrapper">
+        <div class="board" id="board">
+          <button class="cell" data-index="0" aria-label="cell 1"></button>
+          <button class="cell" data-index="1" aria-label="cell 2"></button>
+          <button class="cell" data-index="2" aria-label="cell 3"></button>
+          <button class="cell" data-index="3" aria-label="cell 4"></button>
+          <button class="cell" data-index="4" aria-label="cell 5"></button>
+          <button class="cell" data-index="5" aria-label="cell 6"></button>
+          <button class="cell" data-index="6" aria-label="cell 7"></button>
+          <button class="cell" data-index="7" aria-label="cell 8"></button>
+          <button class="cell" data-index="8" aria-label="cell 9"></button>
+          <div class="win-line" id="win-line" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="scoreboard">
+        <div class="score">
+          <span class="label">X Wins</span>
+          <span class="value" id="x-score">0</span>
+        </div>
+        <div class="score">
+          <span class="label">O Wins</span>
+          <span class="value" id="o-score">0</span>
+        </div>
+        <div class="score">
+          <span class="label">Draws</span>
+          <span class="value" id="draw-score">0</span>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="restart-btn" class="btn">Restart Round</button>
+        <button id="reset-btn" class="btn ghost">Reset Scores</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
